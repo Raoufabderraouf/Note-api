@@ -41,7 +41,13 @@ module.exports = (mongoose) => {
   userSchema.methods.toJSON = function () {
     const user = this;
     const userObject = user.toObject();
+
     delete userObject.password;
+    delete userObject.__v;
+
+    userObject.id = userObject._id;
+    delete userObject._id;
+
     return userObject;
   };
 
