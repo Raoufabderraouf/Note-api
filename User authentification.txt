@@ -1,0 +1,11 @@
+users auth
+creer un model pour users:
+user: email, Passw, display name.
+il faut creer:--> Post /auth /signup
+
+et
+
+Post /auth/login
+
+- faut sauvegarder le login--> session token
+session :--> token, user, expiry
