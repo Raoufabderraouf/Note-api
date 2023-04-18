@@ -17,7 +17,7 @@ module.exports = (mongoose) => {
     },
   });
 
-  SessionSchema.methods.hasexpired = function () {
+  SessionSchema.methods.hasExpired = function () {
     return this.expiryDate < new Date();
   };
   SessionSchema.methods.toJSON = function () {
